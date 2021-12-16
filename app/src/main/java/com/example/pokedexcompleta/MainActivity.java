@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity
             {
                 try
                 {
+                    System.out.println("pepe");
                     Document resCompleto = Jsoup.connect(urlPkm).get();
                     nombres = (ArrayList<String>) resCompleto.select(pathPkm).eachText();
                     nombres.remove(0); //En esta página el elemento 0 no nos vale
